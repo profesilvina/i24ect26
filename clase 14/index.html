@@ -29,6 +29,9 @@
         .resource-link:hover { text-decoration: underline; }
         .image-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
         .image-row img { width: 100%; height: auto; border-radius: 8px; border: 1px solid #e5e7eb; }
+        .checklist-item { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.75rem; }
+        .checkbox { min-width: 1.25rem; height: 1.25rem; border: 2px solid #d1d5db; border-radius: 4px; margin-top: 0.25rem; background: white; }
+        .form-frame { width: 100%; min-height: 2200px; border: 0; background: white; }
     </style>
 </head>
 <body>
@@ -46,18 +49,60 @@
             <h2 class="border-none !mt-4">Software matemático</h2>
         </header>
 
-        <div class="aside border-l-4 border-purple-500">
-            <span>💻</span>
+        <div class="aside border-l-4 border-blue-500">
+            <span>🎯</span>
             <div>
-                <h3 class="!mt-0 !mb-2 !text-xl">Presentación del grupo</h3>
-                <p>El grupo encargado de investigar el tema no envió el video solicitado. Comparto aquí la presentación disponible y los recursos para profundizar.</p>
-                <p class="mt-3"><a href="https://notebooklm.google.com/notebook/f3073eaa-e3ff-4c0e-b1aa-db3b6eaf7589/artifact/d580cea6-dca6-486e-90f2-c38c5809d55a?utm_source=nlm_web_share&utm_medium=google_oo&utm_campaign=art_share_1&utm_content=&utm_smc=nlm_web_share_google_oo_art_share_1_" target="_blank" class="resource-link">Abrir presentación del grupo →</a></p>
+                <h3 class="!mt-0 !mb-2 !text-xl">Tareas de esta clase</h3>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span>Mirar la investigación sobre Software matemático presentada por el grupo.</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span>Responder las preguntas del formulario para acreditar la asistencia de la clase virtual.</span>
+                </div>
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <span>Realizar la actividad de GeoGebra Classroom.</span>
+                </div>
             </div>
         </div>
 
         <hr class="my-12 border-gray-200">
 
-        <h2>1. Recursos propuestos por la profesora</h2>
+        <h2>1. Presentación del grupo</h2>
+        <p>En la clase virtual trabajamos con el tema <strong>Software matemático</strong>. El grupo integrado por <strong>Ana Lía Solores</strong>, <strong>Nicolás López</strong>, <strong>Natasha Cardillo</strong> y <strong>Gabriel D’Amelia</strong> nos presenta su investigación.</p>
+
+        <h3>Video de la presentación</h3>
+        <p>En este video pueden escuchar la explicación del grupo.</p>
+        <div class="responsive-iframe-container">
+            <iframe src="https://drive.google.com/file/d/1uTQ0X7wZHzlQnhJaf7CWUbA8y2YSAWWU/preview" allowfullscreen></iframe>
+        </div>
+        <p class="mt-2 text-sm text-gray-600">Si el video no carga correctamente, pueden abrirlo desde este enlace: <a href="https://drive.google.com/file/d/1uTQ0X7wZHzlQnhJaf7CWUbA8y2YSAWWU/view?usp=drivesdk" target="_blank" class="resource-link">abrir video en Google Drive</a>.</p>
+
+        <hr class="my-12 border-gray-200">
+
+        <h2>2. Actividad de asistencia</h2>
+        <p>Luego de mirar el video, respondan las preguntas del formulario y/o realicen la actividad de GeoGebra Classroom para acreditar la asistencia correspondiente a la clase virtual.</p>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-6 mt-6">
+            <h3 class="!mt-0 !mb-3 !text-lg text-blue-900">Formulario de la clase</h3>
+            <p>Si el formulario no carga correctamente en esta página, pueden abrirlo desde este enlace:</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrRE_s3Jby0e3-YCrzOpvsapDfsfzZ7Jf4OHM5FtbKGvxcZQ/viewform?usp=sharing&ouid=102309077094582048741" target="_blank" class="resource-link">Abrir formulario para acreditar asistencia</a>
+        </div>
+
+        <div class="mt-8 bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdrRE_s3Jby0e3-YCrzOpvsapDfsfzZ7Jf4OHM5FtbKGvxcZQ/viewform?embedded=true" class="form-frame" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+        </div>
+
+        <p class="mt-6">El software GeoGebra permite crear actividades en una página web y asignarlas a un GeoGebra Classroom dentro del mismo programa. El trabajo de cada uno de ustedes será entrar a este GeoGebra Classroom creado para la cursada.</p>
+        <p>Previamente, deberán crearse una cuenta en GeoGebra online con su correo si todavía no la tienen.</p>
+
+        <p class="mt-6"><strong>GeoGebra Classroom:</strong> <a href="https://www.geogebra.org/classroom/jy5qqzwt" target="_blank" class="resource-link">Ingresar al GeoGebra Classroom →</a></p>
+
+        <hr class="my-12 border-gray-200">
+
+        <h2>3. Recursos propuestos por la profesora</h2>
         <h3>GeoGebra</h3>
         <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeZf8DwncrLsVRhY5Jfhwhlm6nJd1YXeBw6NERdo8BJQ&s=10" alt="GeoGebra" class="mt-3 rounded-md border border-gray-200" style="max-width: 240px; width: 100%;"></p>
         <p><strong>Herramientas de GeoGebra y recursos</strong></p>
@@ -103,15 +148,7 @@
 
         <hr class="my-12 border-gray-200">
 
-        <h2>2. Actividad de asistencia</h2>
-        <p>Para acreditar la asistencia de la clase de hoy, como el grupo 2 no envió el formulario, les adelanté la actividad de la clase siguiente.</p>
-        <p>El software GeoGebra permite crear actividades en una página web y asignarlas a un GeoGebra Classroom dentro del mismo programa. El trabajo de cada uno de ustedes será entrar a este GeoGebra Classroom creado para la cursada.</p>
-        <p>Previamente, deberán crearse una cuenta en GeoGebra online con su correo si todavía no la tienen.</p>
-        <p class="mt-3"><a href="https://www.geogebra.org/classroom/jy5qqzwt" target="_blank" class="resource-link">Ingresar al GeoGebra Classroom →</a></p>
-
-        <hr class="my-12 border-gray-200">
-
-        <h2>3. Bibliografía</h2>
+        <h2>4. Bibliografía</h2>
         <p>Carrillo de Albornoz Torre, A. (2012). El dinamismo de GeoGebra.</p>
         <p><a href="https://uruguayeduca.anep.edu.uy/sites/default/files/2017-05/El%20dinamismo%20de%20GeoGebra.pdf" target="_blank" class="resource-link">https://uruguayeduca.anep.edu.uy/sites/default/files/2017-05/El%20dinamismo%20de%20GeoGebra.pdf</a></p>
 
