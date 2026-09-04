@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 18 - Enseñar con Tecnología</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #fbfbfa;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+      color: #37352f;
+      line-height: 1.6;
+    }
+    .notion-container { max-width: 950px; margin: 0 auto; padding: 40px 20px; }
+    h1 { font-size: 2.75rem; font-weight: 800; margin-bottom: 1.5rem; color: #1a1a1a; }
+    h2 { font-size: 2.1rem !important; font-weight: 800 !important; color: #1a1a1a !important; margin-top: 2.5rem !important; margin-bottom: 1.25rem !important; border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; }
+    h3 { font-size: 1.4rem !important; font-weight: 700 !important; color: #374151 !important; margin-top: 1.5rem !important; }
+    .aside { background: #f1f0ef; padding: 1.5rem; border-radius: 6px; margin: 1.5rem 0; display: flex; gap: 1rem; }
+    .back-link { color: #838170; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+    .back-link:hover { color: #37352f; }
+    .resource-link { color: #2383e2; font-weight: 600; text-decoration: none; word-break: break-word; }
+    .resource-link:hover { text-decoration: underline; }
+    .video-placeholder {
+      position: relative; width: 100%; padding-top: 56.25%; background-size: cover; background-position: center; border-radius: 12px; cursor: pointer; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.12); margin: 16px 0; display: block; text-decoration: none;
+    }
+    .video-placeholder::before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.2); transition: background 0.3s; }
+    .video-placeholder:hover::before { background: rgba(0,0,0,0.35); }
+    .play-button { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 70px; height: 70px; background: rgba(255, 0, 0, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: transform 0.2s, background 0.2s; }
+    .video-placeholder:hover .play-button { transform: translate(-50%, -50%) scale(1.1); background: rgba(255, 0, 0, 1); }
+    .play-icon { width: 0; height: 0; border-top: 13px solid transparent; border-bottom: 13px solid transparent; border-left: 22px solid white; margin-left: 4px; }
+    .card-box { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 1.5rem; box-shadow: 0 2px 5px rgba(0,0,0,0.04); }
+    .checklist-item { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.65rem; }
+    .checkbox { min-width: 1.25rem; height: 1.25rem; border: 2px solid #d1d5db; border-radius: 4px; margin-top: 0.25rem; background: white; }
+    .badge { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
+    ol, ul { padding-left: 1.5rem; margin: 0.8rem 0 1rem; }
+    li { margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+  <img src="../banneri24.png" alt="Banner" class="w-full h-auto mb-8">
+  <div class="notion-container">
+    <nav class="mb-10">
+      <a href="../index.html" class="back-link">
+        <span>←</span> Volver a la Hoja de Ruta
+      </a>
+    </nav>
+
+    <header class="mb-12">
+      <h1>Clase 18</h1>
+      <p class="text-gray-500 italic text-xl">Fecha: viernes 4 de septiembre de 2026 — Modalidad: Presencial</p>
+      <h2 class="border-none !mt-4">Actividad de Programación en el Aula de Matemática</h2>
+    </header>
+
+    <!-- Encuadre / Tareas -->
+    <div class="aside border-l-4 border-purple-500">
+      <span>💡</span>
+      <div>
+        <h3 class="!mt-0 !mb-2 !text-xl">Dinámica de la clase presencial</h3>
+        <p class="mb-3">Continuando con el recorrido iniciado en la Clase 17 con la investigación del <strong>Grupo 3</strong>, en esta clase presencial nos dedicamos a <strong>experimentar, analizar y programar</strong> propuestas concretas aplicadas a contenidos matemáticos.</p>
+        <div class="checklist-item">
+          <div class="checkbox"></div>
+          <span>Explorar y analizar los videojuegos y simuladores educativos en <strong>Scratch</strong> seleccionados por el equipo.</span>
+        </div>
+        <div class="checklist-item">
+          <div class="checkbox"></div>
+          <span>Identificar los conceptos matemáticos involucrados (ángulos, múltiplos, sistema sexagesimal y algoritmos).</span>
+        </div>
+        <div class="checklist-item">
+          <div class="checkbox"></div>
+          <span>Conocer el desarrollo y la lógica algorítmica de una calculadora programada en <strong>C++</strong>.</span>
+        </div>
+        <div class="checklist-item">
+          <div class="checkbox"></div>
+          <span>Reflexionar sobre las posibilidades de transferir estas propuestas al diseño didáctico en la escuela secundaria.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Introducción -->
+    <section class="my-10">
+      <h2>1. Recursos seleccionados por el Grupo 3</h2>
+      <p class="text-lg">
+        Estos videos y proyectos fueron seleccionados por los y las integrantes del grupo que investigaron <strong>Programación en Matemática</strong> (Ernesta, Enzo; Guerrero, Michelle; Talavera, Luciana; Valdez, Lautaro y Zancristoforo, Gian) como disparadores para trabajar y debatir en esta clase:
+      </p>
+    </section>
+
+    <!-- Scratch Section -->
+    <section class="my-10">
+      <h2>2. Juegos y desarrollos matemáticos en Scratch</h2>
+      <p>
+        Scratch nos permite trabajar el <strong>pensamiento computacional</strong> mediante bloques visuales, facilitando que los estudiantes modelicen situaciones, construyan condicionales lógicos y visualicen propiedades geométricas y numéricas de forma interactiva.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-6">
+        
+        <!-- Recurso 1 -->
+        <div class="card-box flex flex-col justify-between">
+          <div>
+            <span class="badge bg-amber-100 text-amber-800 mb-2">Geometría</span>
+            <h3 class="!mt-1 !mb-2 !text-lg font-bold text-gray-900">Clasificador de triángulos según sus ángulos</h3>
+            <p class="text-sm text-gray-600 mb-3">
+              Construcción de un algoritmo que analiza medidas angulares para determinar si un triángulo es acutángulo, rectángulo u obtusángulo.
+            </p>
+            <a href="https://youtu.be/GJercnhw00E?si=qTvHV3dbHGvRBRCy" target="_blank" class="video-placeholder" style="background-image: url('https://img.youtube.com/vi/GJercnhw00E/hqdefault.jpg');">
+              <div class="play-button" style="width:54px; height:54px;"><div class="play-icon" style="border-left-width: 16px; border-top-width: 9px; border-bottom-width: 9px;"></div></div>
+            </a>
+          </div>
+          <div class="mt-3 text-center">
+            <a href="https://youtu.be/GJercnhw00E?si=qTvHV3dbHGvRBRCy" target="_blank" class="resource-link text-sm">🔗 Ver video en YouTube</a>
+          </div>
+        </div>
+
+        <!-- Recurso 2 -->
+        <div class="card-box flex flex-col justify-between">
+          <div>
+            <span class="badge bg-blue-100 text-blue-800 mb-2">Aritmética y Sistemas</span>
+            <h3 class="!mt-1 !mb-2 !text-lg font-bold text-gray-900">Suma en sistema sexagesimal</h3>
+            <p class="text-sm text-gray-600 mb-3">
+              Programación de la lógica de acarreo en base 60 para sumar grados, minutos y segundos (o tiempo), trabajando algoritmos posicionales.
+            </p>
+            <a href="https://youtu.be/aEVFFQD9rqg?si=GGiUmE-LT8DVaYiv" target="_blank" class="video-placeholder" style="background-image: url('https://img.youtube.com/vi/aEVFFQD9rqg/hqdefault.jpg');">
+              <div class="play-button" style="width:54px; height:54px;"><div class="play-icon" style="border-left-width: 16px; border-top-width: 9px; border-bottom-width: 9px;"></div></div>
+            </a>
+          </div>
+          <div class="mt-3 text-center">
+            <a href="https://youtu.be/aEVFFQD9rqg?si=GGiUmE-LT8DVaYiv" target="_blank" class="resource-link text-sm">🔗 Ver video en YouTube</a>
+          </div>
+        </div>
+
+        <!-- Recurso 3 -->
+        <div class="card-box flex flex-col justify-between">
+          <div>
+            <span class="badge bg-emerald-100 text-emerald-800 mb-2">Teoría de Números</span>
+            <h3 class="!mt-1 !mb-2 !text-lg font-bold text-gray-900">Múltiplos de un número</h3>
+            <p class="text-sm text-gray-600 mb-3">
+              Juego interactivo para evaluar divisibilidad y múltiplos aplicando el operador módulo (resto de la división) en tiempo real.
+            </p>
+            <a href="https://youtu.be/jCsV8IQnKow?si=l7zRryA66lzXb6oD" target="_blank" class="video-placeholder" style="background-image: url('https://img.youtube.com/vi/jCsV8IQnKow/hqdefault.jpg');">
+              <div class="play-button" style="width:54px; height:54px;"><div class="play-icon" style="border-left-width: 16px; border-top-width: 9px; border-bottom-width: 9px;"></div></div>
+            </a>
+          </div>
+          <div class="mt-3 text-center">
+            <a href="https://youtu.be/jCsV8IQnKow?si=l7zRryA66lzXb6oD" target="_blank" class="resource-link text-sm">🔗 Ver video en YouTube</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- C++ Section -->
+    <section class="my-10">
+      <h2>3. Programación en Lenguaje C++</h2>
+      <p>
+        A diferencia de los entornos por bloques, los lenguajes basados en texto como <strong>C++</strong> introducen a los estudiantes en la sintaxis formal, el tipado de datos y el flujo estricto de control algorítmico.
+      </p>
+
+      <div class="card-box my-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div>
+            <span class="badge bg-purple-100 text-purple-800 mb-2">Programación en texto</span>
+            <h3 class="!mt-1 !mb-2 !text-xl font-bold text-gray-900">Programar una calculadora en lenguaje C++</h3>
+            <p class="text-gray-600 mb-4">
+              Desarrollo paso a paso de una calculadora que procesa operaciones aritméticas fundamentales mediante estructuras condicionales (<code>switch / if-else</code>) y funciones, articulando el rigor de la notación matemática con la sintaxis computacional.
+            </p>
+            <a href="https://www.youtube.com/watch?v=VObQCbEciYQ" target="_blank" class="resource-link font-semibold">
+              🔗 Abrir tutorial de Calculadora en C++ en YouTube →
+            </a>
+          </div>
+          <div>
+            <a href="https://www.youtube.com/watch?v=VObQCbEciYQ" target="_blank" class="video-placeholder" style="background-image: url('https://img.youtube.com/vi/VObQCbEciYQ/hqdefault.jpg');">
+              <div class="play-button"><div class="play-icon"></div></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="my-12 border-gray-200">
+
+    <nav class="mb-10">
+      <a href="../index.html" class="back-link">
+        <span>←</span> Volver a la Hoja de Ruta
+      </a>
+    </nav>
+
+    <footer class="mt-12 text-center text-gray-500 text-sm">
+      <p>Prof. Silvina Busto - Enseñar con Tecnología - ISFDyT 24</p>
+    </footer>
+  </div>
+</body>
+</html>
