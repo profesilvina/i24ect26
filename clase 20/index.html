@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 20 - Enseñar con Tecnología - ISFDyT N° 24</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #fbfbfa;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+      color: #37352f;
+      line-height: 1.6;
+    }
+    .notion-container { max-width: 950px; margin: 0 auto; padding: 40px 20px; }
+    h1 { font-size: 2.75rem; font-weight: 800; margin-bottom: 1.5rem; color: #1a1a1a; }
+    h2 { font-size: 2.1rem !important; font-weight: 800 !important; color: #1a1a1a !important; margin-top: 2.5rem !important; margin-bottom: 1.25rem !important; border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; }
+    h3 { font-size: 1.4rem !important; font-weight: 700 !important; color: #374151 !important; margin-top: 1.5rem !important; }
+    .aside { background: #f1f0ef; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; display: flex; gap: 1rem; }
+    .back-link { color: #838170; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+    .back-link:hover { color: #37352f; }
+    .resource-link { color: #2383e2; font-weight: 600; text-decoration: none; word-break: break-word; }
+    .resource-link:hover { text-decoration: underline; }
+    .card-box { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .checklist-item { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.65rem; }
+    .checkbox { min-width: 1.25rem; height: 1.25rem; border: 2px solid #d1d5db; border-radius: 4px; margin-top: 0.25rem; background: white; }
+    .badge { display: inline-block; padding: 0.25rem 0.65rem; border-radius: 6px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; }
+    .video-wrapper { position: relative; overflow: hidden; width: 100%; padding-top: 56.25%; margin: 16px 0; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+    .video-placeholder {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      cursor: pointer;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      margin: 16px 0;
+      display: block;
+      text-decoration: none;
+    }
+    .video-placeholder::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+    .video-placeholder:hover::before {
+      background: rgba(0,0,0,0.35);
+    }
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 72px;
+      height: 72px;
+      background: rgba(255, 0, 0, 0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s, background 0.2s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .video-placeholder:hover .play-button {
+      transform: translate(-50%, -50%) scale(1.1);
+      background: rgba(255, 0, 0, 1);
+    }
+    .play-icon {
+      width: 0;
+      height: 0;
+      border-top: 13px solid transparent;
+      border-bottom: 13px solid transparent;
+      border-left: 22px solid white;
+      margin-left: 4px;
+    }
+    ul, ol { padding-left: 1.5rem; margin: 0.8rem 0 1rem; }
+    li { margin-bottom: 0.55rem; }
+  </style>
+</head>
+<body>
+  <img src="../banneri24.png" alt="Banner Instituto 24" class="w-full h-auto mb-8">
+  <div class="notion-container">
+    <nav class="mb-10">
+      <a href="../index.html" class="back-link">
+        <span>←</span> Volver a la Hoja de Ruta
+      </a>
+    </nav>
+
+    <header class="mb-10">
+      <h1>Clase 20</h1>
+      <p class="text-gray-500 italic text-xl">Fecha: jueves 24 de septiembre de 2026 — Modalidad: Presencial</p>
+      <h2 class="border-none !mt-4">Actividad de gamificación</h2>
+      <p class="text-2xl font-bold text-gray-800 mt-2">Escape Room presencial con contenido matemático</p>
+      <p class="mt-4 text-lg text-gray-700 leading-relaxed">
+        Luego de la investigación sobre gamificación de las compañeras y compañeros del grupo 4: <strong>Ana Belando, Alicia Cantero, Brian Cañete, Agustina Campo, Ivan Morel, Scotto Joubin Abril, Estevez Micaela y Villalba Luz</strong>, la propuesta para esta clase presencial es crear con tu grupo un <strong>Escape Room virtual con contenido matemático</strong>.
+      </p>
+    </header>
+
+    <!-- Encuadre y dinámicas de la clase -->
+    <div class="aside border-l-4 border-purple-500">
+      <span class="text-2xl">🎯</span>
+      <div>
+        <h3 class="!mt-0 !mb-2 !text-xl">Dinámica de la clase presencial</h3>
+        <div class="checklist-item">
+          <div class="checkbox"></div>
+          <span>Explorar y resolver la experiencia de <strong>Escape Room diseñada por el Grupo 4</strong>.</span>
+        </div>
+        <div class="checklist-item">
+          <div class="checkbox"></div>
+          <span>Analizar la estructura pedagógica, narrativa y secuenciación de pistas lúdico-matemáticas.</span>
+        </div>
+        <div class="checklist-item">
+          <div class="checkbox"></div>
+          <span>Visualizar el <strong>videotutorial recomendado</strong> para estructurar breakouts y escape rooms en Genially.</span>
+        </div>
+        <div class="checklist-item">
+          <div class="checkbox"></div>
+          <span>Diseñar en equipos su propia propuesta de <strong>Escape Room virtual de contenido matemático</strong> para la escuela secundaria.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Escape Room creado por el Grupo 4 -->
+    <section class="my-10 bg-white border border-purple-200 rounded-xl p-6 shadow-sm">
+      <div class="flex items-center gap-2 mb-2">
+        <span class="badge bg-purple-100 text-purple-800">Producción de los estudiantes</span>
+        <span class="badge bg-indigo-100 text-indigo-800">Grupo 4</span>
+      </div>
+      <h3 class="!mt-1 !mb-2 !text-2xl text-[#7e3af2] font-bold">Escape Room creado por el Grupo 4</h3>
+      <p class="text-gray-700 font-medium mb-4">
+        Integrantes: <strong>Ana Belando, Alicia Cantero, Brian Cañete, Agustina Campo, Ivan Morel, Scotto Joubin Abril, Estevez Micaela y Villalba Luz</strong>.
+      </p>
+      
+      <div style="width: 100%;" class="my-4">
+        <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;" class="rounded-lg overflow-hidden shadow-md border border-gray-200">
+          <iframe title="Escape Room - Grupo 4" frameborder="0" width="1200px" height="675px" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/6a59717e03b5fc6ad1948087" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
+        </div>
+      </div>
+      <div class="mt-3 flex flex-wrap items-center justify-between gap-3">
+        <a href="https://view.genially.com/6a59717e03b5fc6ad1948087" target="_blank" class="resource-link font-semibold inline-flex items-center gap-1">
+          <span>🔗</span> Abrir Escape Room del Grupo 4 en pantalla completa
+        </a>
+      </div>
+    </section>
+
+    <!-- Conceptos Clave -->
+    <section class="mb-8">
+      <h2>¿Qué es un Escape Room educativo?</h2>
+      <p class="text-gray-700 leading-relaxed text-lg">
+        Un Escape Room educativo es una propuesta lúdica en la que los estudiantes resuelven desafíos, enigmas o pistas para avanzar hacia una meta o “escapar” de una situación. Sirve para trabajar contenidos curriculares, promover la colaboración y generar motivación intrínseca a través del juego y el razonamiento.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2>¿Para qué sirve?</h2>
+      <ul class="text-gray-700 space-y-2">
+        <li><strong>Potenciar el trabajo en equipo</strong> y la participación activa de cada integrante.</li>
+        <li><strong>Trabajar contenidos matemáticos</strong> con una propuesta mucho más dinámica, situada y atractiva.</li>
+        <li><strong>Estimular la resolución de problemas</strong>, el pensamiento lateral, la observación crítica y la creatividad.</li>
+        <li><strong>Vincular la tecnología</strong> con experiencias de aprendizaje significativo y narrativas inmersivas.</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2>Claves para diseñarlo</h2>
+      <ul class="text-gray-700 space-y-2">
+        <li><strong>Definir una narrativa o relato:</strong> una consigna o historia convocante que otorgue sentido al recorrido y conecte con la actividad.</li>
+        <li><strong>Plantear pistas, enigmas o desafíos progresivos:</strong> donde la resolución de cada prueba matemática permita desbloquear la siguiente clave o candado.</li>
+        <li><strong>Incluir una consigna final:</strong> un desenlace que permita resolver el misterio, abrir el cofre o llegar a una conclusión compartida.</li>
+        <li><strong>Adaptar la propuesta:</strong> ajustar la complejidad al nivel escolar, al tiempo disponible y al contenido curricular que se desea movilizar.</li>
+      </ul>
+    </section>
+
+    <!-- Tutoriales -->
+    <section class="mb-8">
+      <h2>Tutoriales para la creación</h2>
+      
+      <!-- Video sugerido por el equipo -->
+      <div class="card-box mb-6 bg-amber-50/50 border-amber-200">
+        <h3 class="!mt-0 !mb-2 text-xl font-bold text-amber-950">
+          📹 Tutorial sugerido por el equipo de investigación (Grupo 4)
+        </h3>
+        <p class="text-gray-600 mb-3">
+          Guía paso a paso para crear un Escape Room o Breakout interactivo utilizando Genially:
+        </p>
+        <a href="https://www.youtube.com/watch?v=CZujLElujYE" target="_blank" class="video-placeholder" style="background-image: url('https://img.youtube.com/vi/CZujLElujYE/maxresdefault.jpg');">
+          <div class="play-button">
+            <div class="play-icon"></div>
+          </div>
+        </a>
+        <div class="mt-3 flex flex-wrap items-center justify-between gap-3">
+          <a href="https://www.youtube.com/watch?v=CZujLElujYE" target="_blank" class="resource-link text-base font-semibold inline-flex items-center gap-2">
+            <span>▶</span> Mirar tutorial "Cómo hacer un Escape Room en Genially" directamente en YouTube
+          </a>
+          <span class="text-xs text-gray-500 font-medium">Canal: Tutoriales de bolsillo</span>
+        </div>
+      </div>
+
+      <h3 class="!mt-6 !mb-3 text-lg font-bold text-gray-800">Otros tutoriales complementarios:</h3>
+      <ul class="space-y-2">
+        <li>
+          <a href="https://www.youtube.com/watch?v=jIZRBQsnbjI" target="_blank" class="resource-link">
+            🎥 Tutorial 2: Diseño y candados digitales en Genially
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=SXJA6DsCpO0" target="_blank" class="resource-link">
+            🎥 Tutorial 3: Creación de enigmas y mecánicas de juego
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Recursos para inspirarse -->
+    <section class="mb-8">
+      <h2>Recursos para inspirarse</h2>
+      <p class="text-gray-700 mb-4">
+        Les comparto para inspirarse una recopilación de <strong>Escape Rooms Matemáticos hechos en Enseñar con Tecnología</strong>:
+      </p>
+      
+      <div class="mt-4 mb-4">
+        <iframe class="wakeletEmbed rounded-xl shadow-sm border border-gray-200" width="100%" height="760px" src="https://embed.wakelet.com/wakes/NTrq89P_NUbwiGyPmbmnc/horizontal?border=1" style="border: none" allow="autoplay"></iframe>
+        <script src="https://embed-assets.wakelet.com/wakelet-embed.js" charset="UTF-8"></script>
+      </div>
+      <p class="mt-2">
+        <a href="https://wakelet.com/wake/NTrq89P_NUbwiGyPmbmnc" target="_blank" class="resource-link text-sm font-medium">
+          🔗 Acceder al Wakelet completo: https://wakelet.com/wake/NTrq89P_NUbwiGyPmbmnc
+        </a>
+      </p>
+
+      <ul class="mt-6 space-y-2">
+        <li>
+          <a href="https://www.agorabierta.com/2018/03/escape-room-educativo/" target="_blank" class="resource-link">
+            🌐 ¿Qué es un Escape Room Educativo? — Agora Abierta
+          </a>
+        </li>
+        <li>
+          <a href="https://www.ayudaparamaestros.com/2021/05/como-hacer-un-escape-room-o-un-breakout.html?fbclid=IwAR33UN1Vi9cKUnvQSBbTqCZOVbjrFCqln6EkRZcJuqBEmmgyLLDOrzKK0Ho" target="_blank" class="resource-link">
+            🌐 Cómo hacer un Escape Room o Breakout — Ayuda para Maestros
+          </a>
+        </li>
+        <li>
+          <a href="https://wakelet.com/wake/NTrq89P_NUbwiGyPmbmnc" target="_blank" class="resource-link">
+            📚 Recopilación de Escape Rooms Matemáticos hechos en EcT (Wakelet)
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Ejemplos -->
+    <section class="mb-8">
+      <h2>Ejemplos de Escape Rooms interactivos</h2>
+      <p class="text-gray-600 mb-3">Modelos reales y plantillas para analizar la estructura:</p>
+      <ul class="space-y-2">
+        <li>
+          <a href="https://marzomates.webs.ull.es/escape-rooms/" target="_blank" class="resource-link">
+            🎲 Escape rooms matemáticos — Marzomates
+          </a>
+        </li>
+        <li>
+          <a href="https://emprendereneducacion.blogspot.com/" target="_blank" class="resource-link">
+            🎲 Emprender en Educación (Recursos lúdicos)
+          </a>
+        </li>
+        <li>
+          <a href="https://view.genially.com/5f5ff519e187f60d8693c294" target="_blank" class="resource-link">
+            🧩 Ejemplo en Genially 1
+          </a>
+        </li>
+        <li>
+          <a href="https://view.genially.com/5f81b2bb3d2ac00d150e6f62" target="_blank" class="resource-link">
+            🧩 Ejemplo en Genially 2
+          </a>
+        </li>
+        <li>
+          <a href="https://view.genially.com/5e7f45505ad5150d93cc5f69" target="_blank" class="resource-link">
+            🧩 Ejemplo en Genially 3
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Lecturas y bibliografía -->
+    <section class="mb-8">
+      <h2>Lecturas y bibliografía</h2>
+      <ul class="space-y-2">
+        <li>
+          <a href="http://culturaemprendedora.extremaduraempresarial.es/wp-content/uploads/2018/04/Manual-de-Escape.pdf" target="_blank" class="resource-link">
+            📄 Manual de Escape Room educativo (Guía metodológica para docentes)
+          </a>
+        </li>
+        <li>
+          <a href="https://www.educ.ar/recursos/158843/tendencias-culturales-en-educacion-las-narrativas-ludicas" target="_blank" class="resource-link">
+            📖 Portal Educ.ar (2023). Tendencias culturales en educación: las narrativas lúdicas
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <div class="bg-indigo-50 border-l-4 border-indigo-400 rounded-lg p-6 mt-8">
+      <h3 class="!mt-0 !mb-2 !text-xl text-indigo-950 font-bold">💡 Para tener en cuenta</h3>
+      <p class="text-indigo-900 leading-relaxed">
+        La propuesta invita a pensar cómo convertir una actividad matemática en una experiencia lúdica, colaborativa y tecnológica, promoviendo el aprendizaje a través de desafíos articulados y narrativas que involucren activamente a los alumnos en la resolución de problemas.
+      </p>
+    </div>
+
+    <footer class="mt-14 mb-20">
+      <div class="pt-8 border-t border-gray-200 flex flex-wrap justify-between items-center text-sm text-gray-500 gap-4">
+        <a href="../index.html" class="back-link">
+          <span>←</span> Volver a la Hoja de Ruta
+        </a>
+        <p>Prof. Silvina Busto — ISFDyT N° 24</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
