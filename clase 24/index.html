@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 24: Diseño de la evaluación de la SD - Enseñar con tecnología - ISFDyT N° 24</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body {
+      background-color: #fbfbfa;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      color: #37352f;
+      line-height: 1.6;
+    }
+    .notion-container { max-width: 920px; margin: 0 auto; padding: 40px 20px; }
+    h1 { font-size: 2.75rem; font-weight: 800; margin-bottom: 1.5rem; color: #1a1a1a; }
+    h2 { font-size: 2.15rem !important; font-weight: 800 !important; color: #1a1a1a !important; margin-top: 2.5rem !important; margin-bottom: 1.25rem !important; border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; }
+    h3 { font-size: 1.45rem !important; font-weight: 700 !important; color: #374151 !important; margin-top: 1.75rem !important; }
+    .aside { background: #f1f0ef; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; display: flex; gap: 1rem; }
+    .back-link { color: #838170; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+    .back-link:hover { color: #37352f; }
+    .resource-link { color: #2383e2; font-weight: 600; text-decoration: none; word-break: break-word; }
+    .resource-link:hover { text-decoration: underline; }
+    .feature-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 1.25rem;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .feature-card:hover {
+      border-color: #cbd5e1;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .checklist-item { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.65rem; }
+    .checkbox { min-width: 1.25rem; height: 1.25rem; border: 2px solid #d1d5db; border-radius: 4px; margin-top: 0.25rem; background: white; }
+  </style>
+</head>
+<body>
+  <!-- Banner Superior Institucional ISFDyT N° 24 -->
+  <img src="../banneri24.png" alt="Banner Instituto 24" class="w-full h-auto mb-8">
+
+  <div class="notion-container">
+    <!-- Navegación -->
+    <nav class="mb-12">
+      <a href="../index.html" class="back-link">
+        <span>←</span> Volver a la Hoja de Ruta
+      </a>
+    </nav>
+
+    <!-- Encabezado de la Clase -->
+    <header class="mb-12">
+      <h1>Clase 24</h1>
+      <p class="text-gray-500 italic text-xl">Fecha: viernes 23 de octubre de 2026 — Modalidad: presencial</p>
+      <h2 class="border-none !mt-4">Diseño de la evaluación de la SD</h2>
+    </header>
+
+    <!-- Encuadre Pedagógico Inicial -->
+    <section class="mb-10">
+      <p class="text-lg leading-relaxed text-gray-700 mb-6">
+        En este encuentro presencial trabajaremos en el aula en la construcción de los <strong>instrumentos de evaluación</strong> de la secuencia didáctica con TIC. Articularemos los criterios de enseñanza con las evidencias de aprendizaje que los estudiantes secundarios producirán a lo largo de los tres encuentros.
+      </p>
+
+      <!-- Alerta Fecha Límite de Entrega Definitiva (Última semana) -->
+      <div class="bg-white border-2 border-purple-500 rounded-2xl p-6 text-gray-900 shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center text-3xl shrink-0">
+            <i class="fa-solid fa-hourglass-half"></i>
+          </div>
+          <div>
+            <span class="inline-block px-2.5 py-0.5 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-100 text-purple-800 border border-purple-300 mb-1">
+              Última semana previa a la entrega final
+            </span>
+            <h3 class="!mt-0 !text-xl md:!text-2xl font-black text-purple-950">
+              Fecha límite de entrega de la Secuencia Didáctica: viernes 30 de octubre
+            </h3>
+            <p class="text-sm text-gray-600 mt-1">
+              Resta exactamente una semana para la entrega formal en Google Docs. Aprovechamos este espacio presencial para resolver dudas, revisar observaciones y cerrar el diseño de la evaluación.
+            </p>
+          </div>
+        </div>
+        <span class="shrink-0 px-4 py-2 bg-purple-700 text-white font-black rounded-xl text-sm shadow">
+          🗓️ Entrega final: 30/10
+        </span>
+      </div>
+
+      <!-- Tareas de la clase -->
+      <div class="aside border-l-4 border-purple-600">
+        <span class="text-2xl">🎯</span>
+        <div>
+          <h3 class="!mt-0 !mb-2 !text-xl text-purple-950">Tareas de esta clase presencial</h3>
+          <div class="checklist-item">
+            <div class="checkbox"></div>
+            <span>Explorar los instrumentos de evaluación y seleccionar los pertinentes para cada encuentro de la secuencia.</span>
+          </div>
+          <div class="checklist-item">
+            <div class="checkbox"></div>
+            <span>Completar la sección de evaluación en el documento de la SD en Google Docs.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. Instrumentos de evaluación según normativas y documentos oficiales -->
+    <section class="mb-14">
+      <h2>1. Instrumentos de evaluación</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        A continuación, presentamos los principales instrumentos de evaluación relevados de los documentos oficiales y orientaciones pedagógicas (<a href="https://escuelademaestros.bue.edu.ar/wp-content/uploads/2023/08/LyL01PPT.pdf" target="_blank" rel="noopener noreferrer" class="text-purple-700 font-semibold underline">Escuela de Maestros - buenosaires.gob</a> y <a href="https://educrea.cl/instrumentos-de-evaluacion-en-el-proceso-ensenanza-aprendizaje/" target="_blank" rel="noopener noreferrer" class="text-purple-700 font-semibold underline">Educrea</a>), para que seleccionen los más adecuados para su secuencia didáctica:
+      </p>
+
+      <!-- Tabla de Instrumentos -->
+      <div class="overflow-x-auto bg-white rounded-xl border border-gray-200 shadow-sm mb-8">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-gray-100/80 border-b border-gray-200 text-xs font-bold uppercase tracking-wider text-gray-600">
+              <th class="py-3 px-4">Instrumento</th>
+              <th class="py-3 px-4">Definición según el documento</th>
+              <th class="py-3 px-4">Fuente oficial</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200 text-sm">
+            <tr class="hover:bg-purple-50/40 transition-colors">
+              <td class="py-3.5 px-4 font-semibold text-gray-900 flex items-center gap-2">
+                <i class="fa-solid fa-list-check text-purple-600"></i> Lista de cotejo
+              </td>
+              <td class="py-3.5 px-4 text-gray-700">
+                Guía de observación que enumera comportamientos específicos o características principales de las competencias que se desean observar; permite registrar su presencia o ausencia.
+              </td>
+              <td class="py-3.5 px-4 whitespace-nowrap text-xs text-gray-500 font-mono">
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-200">buenosaires.gob</span>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-purple-50/40 transition-colors">
+              <td class="py-3.5 px-4 font-semibold text-gray-900 flex items-center gap-2">
+                <i class="fa-solid fa-folder-open text-blue-600"></i> Portafolio
+              </td>
+              <td class="py-3.5 px-4 text-gray-700">
+                Colección organizada de trabajos, orientada por una propuesta que le da sentido, estructura y continuidad; documenta cambios en las producciones del estudiante y permite una evaluación individual y longitudinal.
+              </td>
+              <td class="py-3.5 px-4 whitespace-nowrap text-xs text-gray-500 font-mono">
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-200">buenosaires.gob</span>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-purple-50/40 transition-colors">
+              <td class="py-3.5 px-4 font-semibold text-gray-900 flex items-center gap-2">
+                <i class="fa-solid fa-file-signature text-emerald-600"></i> Prueba
+              </td>
+              <td class="py-3.5 px-4 text-gray-700">
+                Situación organizada para obtener documentos que den cuenta de los aprendizajes; puede ser oral, escrita o de actuación.
+              </td>
+              <td class="py-3.5 px-4 whitespace-nowrap text-xs text-gray-500 font-mono">
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-200">buenosaires.gob</span>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-purple-50/40 transition-colors">
+              <td class="py-3.5 px-4 font-semibold text-gray-900 flex items-center gap-2">
+                <i class="fa-solid fa-clipboard text-amber-600"></i> Registro
+              </td>
+              <td class="py-3.5 px-4 text-gray-700">
+                Instrumento de observación que puede ser anecdótico o acumulativo, para documentar comportamientos, avances y evidencias de aprendizaje.
+              </td>
+              <td class="py-3.5 px-4 whitespace-nowrap text-xs text-gray-500 font-mono">
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-200">buenosaires.gob</span>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-purple-50/40 transition-colors">
+              <td class="py-3.5 px-4 font-semibold text-gray-900 flex items-center gap-2">
+                <i class="fa-solid fa-sliders text-indigo-600"></i> Escala
+              </td>
+              <td class="py-3.5 px-4 text-gray-700">
+                Instrumento que gradúa el nivel de logro de un rasgo o criterio observado.
+              </td>
+              <td class="py-3.5 px-4 whitespace-nowrap text-xs text-gray-500 font-mono">
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-200">buenosaires.gob</span>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-purple-50/40 transition-colors">
+              <td class="py-3.5 px-4 font-semibold text-gray-900 flex items-center gap-2">
+                <i class="fa-solid fa-circle-question text-teal-600"></i> Cuestionario
+              </td>
+              <td class="py-3.5 px-4 text-gray-700">
+                Instrumento que puede ser abierto o cerrado, útil para relevar conocimientos, opiniones o autoinformes.
+              </td>
+              <td class="py-3.5 px-4 whitespace-nowrap text-xs text-gray-500 font-mono">
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-200">buenosaires.gob</span>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-purple-50/40 transition-colors">
+              <td class="py-3.5 px-4 font-semibold text-gray-900 flex items-center gap-2">
+                <i class="fa-solid fa-file-lines text-rose-600"></i> Informe
+              </td>
+              <td class="py-3.5 px-4 text-gray-700">
+                Producción que sistematiza información sobre un aprendizaje, proceso o desempeño.
+              </td>
+              <td class="py-3.5 px-4 whitespace-nowrap text-xs text-gray-500 font-mono">
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-200">buenosaires.gob</span>
+              </td>
+            </tr>
+
+            <tr class="hover:bg-purple-50/40 transition-colors">
+              <td class="py-3.5 px-4 font-semibold text-gray-900 flex items-center gap-2">
+                <i class="fa-solid fa-comments text-sky-600"></i> Entrevista
+              </td>
+              <td class="py-3.5 px-4 text-gray-700">
+                Instrumento de recogida de información, guiada o abierta, que permite profundizar en comprensiones, dificultades y procesos del estudiante.
+              </td>
+              <td class="py-3.5 px-4 whitespace-nowrap text-xs text-gray-500 font-mono">
+                <span class="px-2 py-0.5 rounded bg-gray-100 text-gray-700 border border-gray-200">buenosaires.gob</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Orientaciones didácticas: Cómo incorporar estos instrumentos en su Secuencia Didáctica con TIC -->
+      <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6">
+        <h3 class="!mt-0 !text-lg font-bold text-gray-900 flex items-center gap-2 mb-4">
+          <i class="fa-solid fa-lightbulb text-amber-500"></i> ¿Cómo incorporar estos instrumentos en su Secuencia Didáctica con TIC?
+        </h3>
+        <div class="space-y-3.5 text-sm text-gray-700">
+          <div class="bg-white p-4 rounded-xl border border-gray-200">
+            Utilicen una lista de cotejo o un registro anecdótico para observar si los estudiantes lograron....
+          </div>
+          <div class="bg-white p-4 rounded-xl border border-gray-200">
+            <strong>Cierre de clase o Ticket de salida:</strong> Implementen un breve cuestionario con 2 o 3 preguntas conceptuales para relevar comprensiones clave y detectar dudas antes de la clase siguiente.
+          </div>
+          <div class="bg-white p-4 rounded-xl border border-gray-200">
+            <strong>Evaluación integradora final:</strong> elijan una prueba estándar, la creación de una narrativa digital, o alguna producción creada en la clase que dé evidencia de haber logrado los objetivos.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Recursos y Bibliografía Oficial de Consulta -->
+    <section class="mb-14">
+      <h2>2. Materiales y bibliografía de referencia</h2>
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Consulten los documentos teóricos y normativos sobre diseño de instrumentos de evaluación y didáctica de la matemática:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+        <!-- Fascículo 16 Córdoba -->
+        <a 
+          href="https://www.igualdadycalidadcba.gov.ar/SIPEC-CBA/Prioridades/fas_16_Matematica.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="feature-card group hover:border-blue-400 flex flex-col justify-between"
+        >
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-2xl mb-4 group-hover:bg-blue-600 group-hover:text-white transition">
+              <i class="fa-solid fa-file-pdf"></i>
+            </div>
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-700">Fascículo 16 · Matemática</span>
+            <h3 class="!mt-1 !text-lg font-bold text-gray-900 group-hover:text-blue-700 transition">Evaluar para aprender en Matemática</h3>
+            <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+              Propuestas e instrumentos de evaluación formativa orientados a la educación secundaria. Ministerio de Educación de Córdoba.
+            </p>
+          </div>
+          <span class="mt-4 text-xs font-bold text-blue-700 flex items-center gap-1">
+            Descargar PDF oficial <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </a>
+
+        <!-- Educrea -->
+        <a 
+          href="https://educrea.cl/instrumentos-de-evaluacion-en-el-proceso-ensenanza-aprendizaje/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="feature-card group hover:border-emerald-400 flex flex-col justify-between"
+        >
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-2xl mb-4 group-hover:bg-emerald-600 group-hover:text-white transition">
+              <i class="fa-solid fa-book-open-reader"></i>
+            </div>
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-700">Guía pedagógica · Educrea</span>
+            <h3 class="!mt-1 !text-lg font-bold text-gray-900 group-hover:text-emerald-700 transition">Instrumentos de evaluación en el proceso E-A</h3>
+            <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+              Definiciones, clasificación y pautas prácticas para la confección de escalas, listas de cotejo, registros y rúbricas.
+            </p>
+          </div>
+          <span class="mt-4 text-xs font-bold text-emerald-700 flex items-center gap-1">
+            Leer artículo en Educrea <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </a>
+
+        <!-- Escuela de Maestros -->
+        <a 
+          href="https://escuelademaestros.bue.edu.ar/wp-content/uploads/2023/08/LyL01PPT.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="feature-card group hover:border-purple-400 flex flex-col justify-between"
+        >
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-2xl mb-4 group-hover:bg-purple-600 group-hover:text-white transition">
+              <i class="fa-solid fa-chalkboard-user"></i>
+            </div>
+            <span class="text-xs font-bold uppercase tracking-wider text-purple-700">Presentación oficial · GCBA</span>
+            <h3 class="!mt-1 !text-lg font-bold text-gray-900 group-hover:text-purple-700 transition">Evaluación formativa e instrumentos</h3>
+            <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+              Material formativo de la Escuela de Maestros (buenosaires.gob) con conceptualizaciones de instrumentos y registros de evidencias.
+            </p>
+          </div>
+          <span class="mt-4 text-xs font-bold text-purple-700 flex items-center gap-1">
+            Ver presentación PPT <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </a>
+      </div>
+
+      <!-- Tarjetas de Documentos de la Cátedra: Plantilla y Rúbrica 2do Cuatrimestre -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Tarjeta Plantilla SD -->
+        <a 
+          href="https://docs.google.com/document/d/105CqmMxSHR9VYUgvsW_Ni68aVXzaXFhU6JjkrjJpD-s/edit?usp=sharing" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="feature-card group hover:border-purple-400 flex flex-col justify-between"
+        >
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-purple-100 text-[#9061f9] flex items-center justify-center font-bold text-2xl mb-4 group-hover:bg-[#9061f9] group-hover:text-white transition">
+              <i class="fa-solid fa-file-pen"></i>
+            </div>
+            <span class="text-xs font-bold uppercase tracking-wider text-purple-700">Plantilla oficial de trabajo</span>
+            <h3 class="!mt-1 !text-xl font-bold text-gray-900 group-hover:text-purple-700 transition">Documento marco: Secuencia didáctica con TIC</h3>
+            <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+              Estructura formal obligatoria de la secuencia didáctica, casilleros para recursos TIC, instrumentos de evaluación y anexo para registro de prompts de Inteligencia Artificial.
+            </p>
+          </div>
+          <span class="mt-4 text-xs font-bold text-[#9061f9] flex items-center gap-1">
+            Abrir documento en Google Docs <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </a>
+
+        <!-- Tarjeta Rúbrica 2do Cuatrimestre -->
+        <a 
+          href="https://drive.google.com/file/d/1kZepLJSHCvwmATkVMSz13GTpTEzNws4O/view?usp=sharing" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="feature-card group hover:border-emerald-400 flex flex-col justify-between"
+        >
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-2xl mb-4 group-hover:bg-emerald-600 group-hover:text-white transition">
+              <i class="fa-solid fa-clipboard-check"></i>
+            </div>
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-700">Criterios de acreditación de la cátedra</span>
+            <h3 class="!mt-1 !text-xl font-bold text-gray-900 group-hover:text-emerald-700 transition">Rúbrica de evaluación: 2.º cuatrimestre</h3>
+            <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+              Criterios con los que la cátedra evaluará su secuencia didáctica entregada y dimensiones del posterior coloquio de acreditación final.
+            </p>
+          </div>
+          <span class="mt-4 text-xs font-bold text-emerald-700 flex items-center gap-1">
+            Ver rúbrica en Google Drive <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Próximo Encuentro -->
+    <section class="mb-16">
+      <div class="bg-gray-100 rounded-2xl p-6 border border-gray-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-purple-700 bg-purple-100 px-2.5 py-1 rounded-md">Próxima clase virtual</span>
+          <h3 class="!mt-3 !text-xl font-bold text-gray-900">Clase 25 (Viernes 30/10): Entrega final de la Secuencia Didáctica con TIC</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="mt-12 mb-20">
+      <div class="pt-10 border-t border-gray-200 flex items-center justify-between flex-wrap gap-4">
+        <a href="../index.html" class="back-link">
+          <span>←</span> Volver a la Hoja de Ruta
+        </a>
+        <span class="text-xs text-gray-400">
+          Enseñar con Tecnología · ISFDyT N° 24 · Prof. Silvina Busto
+        </span>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
